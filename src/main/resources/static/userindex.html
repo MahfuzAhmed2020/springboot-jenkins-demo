@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>User Registration</title>
+</head>
+
+
+<body>
+
+
+<h2>Create Account</h2>
+
+
+<input id="firstName" placeholder="First Name"><br>
+
+<input id="lastName" placeholder="Last Name"><br>
+
+<input id="email" placeholder="Email"><br>
+
+<input id="password" 
+type="password"
+placeholder="Password"><br>
+
+
+<button onclick="register()">
+Register
+</button>
+
+
+
+<script>
+
+
+function register(){
+
+
+let user={
+
+firstName:
+document.getElementById("firstName").value,
+
+
+lastName:
+document.getElementById("lastName").value,
+
+
+email:
+document.getElementById("email").value,
+
+
+password:
+document.getElementById("password").value
+
+
+};
+
+
+
+fetch("/api/users/register",
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+
+body:JSON.stringify(user)
+
+
+})
+
+
+.then(res=>res.json())
+
+.then(data=>{
+
+alert("Registration Successful ID: "
++data.id);
+
+
+});
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 Start dockerDesktop
-docker restart jenkins 
+in project commamd prompt paste: docker restart jenkins 
 
 http://localhost:8080/
 
@@ -118,3 +118,29 @@ pipeline {
 }
 
 +++++++++++++++++++++++++++++++++++++++++
+
+
+
+mobile applacation
+
+http://localhost:8080/h2-console 
+
+
+http://localhost:8080/api/users
+
+--------------------------------------------
+
+
+
+postman request POST 'http://localhost:8080/api/users/register' \
+  --header 'Content-Type: application/json' \
+  --body '{
+ "firstName":"John",
+ "lastName":"Smith",
+ "email":"john@test.com",
+ "password":"Password@123"
+}'
+
+--------------------------------------------
+
+
