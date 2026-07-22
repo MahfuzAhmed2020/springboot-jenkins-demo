@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
+
+<title>Student CRUD</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -10,16 +10,61 @@
 
 <body>
 
-<h2>Student</h2>
-<h2>Teacher</h2>
-<h2>dean</h2>
 
-<input id="name">
+<h1>Student Management</h1>
 
-<button onclick="save()">Save</button>
+
+<div class="form">
+
+<input id="id" placeholder="ID (for update/delete)">
+
+<input id="name" placeholder="Name">
+
+<input id="email" placeholder="Email">
+
+<input id="age" placeholder="Age">
+
+
+<button onclick="addStudent()">Add</button>
+
+<button onclick="updateStudent()">Update</button>
+
+<button onclick="patchStudent()">Patch</button>
+
+<button onclick="deleteStudent()">Delete</button>
+
+<button onclick="loadStudents()">View All</button>
+
+</div>
+
+
+<h2>Students</h2>
+
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Age</th>
+</tr>
+
+</thead>
+
+
+<tbody id="studentTable">
+
+</tbody>
+
+
+</table>
+
+
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
