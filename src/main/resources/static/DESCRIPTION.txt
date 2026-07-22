@@ -1,0 +1,119 @@
+
+
+http://localhost:8080/
+
+
+http://localhost:8099
+
+
+https://solar-robot-815437.postman.co/workspace/My-Workspace~ba0867fe-e667-48a1-8aa0-f34d7f32fcf4/collection/14402211-d1d68049-063e-44f8-be12-60f9353d557b?action=share&source=copy-link&creator=14402211
+
++++++++++++++++++++++++++++
+
+
+postman request POST 'http://localhost:8080/students' \
+  --header 'Content-Type: application/json' \
+  --body ' {
+        "age": 66,
+        "email": "uuuu@gmail.com",        
+        "name": "jjjjjj"
+    }'
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++
+
+
+docker run -d `
+  --name jenkins `
+  -p 8099:8080 `
+  -p 50000:50000 `
+  -v jenkins_home:/var/jenkins_home `
+  jenkins/jenkins:lts
+  
+  -----------------------
+  
+docker ps
+
+------------------
+
+http://localhost:8099
+
++++++++++++++++++++++++++++
+
+Windows 11
+│
+├── Jenkins Container
+│      Port 8099 → Jenkins 8080
+│
+├── mobile_user_web
+│      Port 8081 → Apache 80
+│
+├── MySQL Container
+│      Port 3308 → MySQL 3306
+│
+└── phpMyAdmin
+       Port 8082 → Apache 80
+	   
++++++++++++++++++++++++++++++
+
+
+
+http://localhost:8099
+
+
+
+Username
+
+jenkinsMAHFUZ
+
+
+
+
+++++++++++++++++++++++++++++++++++
+
+
+
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Build') {
+
+            steps {
+
+                echo 'Building the app'
+
+            }
+        }
+
+
+        stage('Test') {
+
+            steps {
+
+                echo 'Running tests'
+
+            }
+        }
+
+
+        stage('Deploy') {
+
+            steps {
+
+                echo 'Deploying the app'
+
+            }
+        }
+
+    }
+
+}
+
++++++++++++++++++++++++++++++++++++++++++
