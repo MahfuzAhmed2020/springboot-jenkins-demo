@@ -21,7 +21,7 @@ public class HomeController {
     }
     @GetMapping("/")
 public String home() {
-    return "Hello Spring Boot";
+    return "Hello Spring Boot ********************";
 }
 
 }
